@@ -1,11 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { NavLink, withRouter } from 'react-router-dom';
 import s from './MovieDetailsPageBar.module.css';
 
-class MovieDetailsPageBar extends Component {
-    state={ }
+const MovieDetailsPageBar = ({ match }) => {
 
-render() {
     return (
         <section>
             <h3>Additional information</h3>
@@ -13,7 +11,7 @@ render() {
                 <li>
                     <NavLink
                     exact
-                    to="/movies/:movieId/cast"
+                    to={`${match.url}/cast`}
                     className={s.NavLink}
                     activeClassName="NavLink--active"
                 >
@@ -22,8 +20,7 @@ render() {
                 </li>
                 <li>
                     <NavLink
-                    exact
-                    to="/movies/:movieId/reviews"
+                    to={`${match.url}/reviews`}
                     className={s.NavLink}
                     activeClassName="NavLink--active"
                 >
@@ -34,7 +31,6 @@ render() {
             </ul>
         </section>
     )
-    }
 }
 
-export default MovieDetailsPageBar
+export default  withRouter(MovieDetailsPageBar) 

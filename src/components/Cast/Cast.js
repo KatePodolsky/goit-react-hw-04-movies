@@ -12,7 +12,7 @@ class Cast extends Component{
         movieApi.fetchMovieCastDetails(movieId)
             .then(response =>
                 this.setState({
-                    cast: response.data.cast,
+                    cast: response.data.cast
                 }),
             )
             .catch(error => this.setState({ error }));
@@ -20,12 +20,11 @@ class Cast extends Component{
     
     render() {
         const { cast } = this.state;
-
         return (
             <>
                 <ul>
-                    {cast.map(({ cast_id, character, name, profile_path }) => (
-                        <li key={cast_id}>
+                    {cast.map(({ id, character, name, profile_path }) => (
+                        <li key={id}>
                             {profile_path && (
                                 <img
                                     src={`https://image.tmdb.org/t/p/w200${profile_path}`}

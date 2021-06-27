@@ -19,13 +19,6 @@ class HomePage extends Component {
         this.setState({movies:results})
       })
       .catch(error => this.setState({ error }))
-    
-    setTimeout(() => {
-      window.scrollTo({
-        top: document.documentElement.scrollHeight,
-        behavior: 'smooth',
-      });
-    }, 500);
   }
   render() {
     return (

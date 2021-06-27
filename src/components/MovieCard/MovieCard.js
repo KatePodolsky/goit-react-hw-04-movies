@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import s from './MovieCard.module.css';
 
 
@@ -20,6 +21,16 @@ const MovieCard = ({ posterImg, title, releaseDate, voteAverage, overview, genre
             </div>
         </>
     )
+}
+
+MovieCard.propTypes = {
+    results: PropTypes.arrayOf(PropTypes.shape({
+        releaseDate: PropTypes.number.isRequired,
+        posterImg: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        voteAverage: PropTypes.number.isRequired,
+        genres: PropTypes.array,
+    }))
 }
 
 export default MovieCard
