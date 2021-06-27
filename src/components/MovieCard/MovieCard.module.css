@@ -1,0 +1,10 @@
+.MovieCard {
+  display: flex;
+}
+.PosterImg {
+  margin-right: 20px;
+}
+.Descr {
+  margin: 0;
+  padding: 0;
+}

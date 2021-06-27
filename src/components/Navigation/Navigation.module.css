@@ -1,0 +1,14 @@
+.Nav {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.NavLink {
+  text-decoration: none;
+}
+
+.NavItem {
+  margin-right: 10px;
+}
