@@ -10,11 +10,11 @@ import routes from '../../routes';
 
 class MovieDetailsPage extends Component {
     state = {
-        poster_path: null,
-        title: null,
-        release_date:null,
-        vote_average: null,
-        overview: null,
+        poster_path: '',
+        title: '',
+        release_date:0,
+        vote_average: 0.0,
+        overview: '',
         genres:[],
 
     };
