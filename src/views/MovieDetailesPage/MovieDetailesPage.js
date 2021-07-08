@@ -41,7 +41,8 @@ class MovieDetailsPage extends Component {
         if (location.state && location.state.from) {
             return  history.push(location.state.from)
         }
-        history.push(routes.home)       
+        history.push(routes.home)
+        localStorage.getItem('searchQuery')
     }
 
     render() {

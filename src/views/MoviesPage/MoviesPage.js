@@ -13,10 +13,11 @@ class MoviesPage extends Component {
         isLoading: false,
         error:null,
     };
-  
+
     componentDidUpdate(prevProps, prevState) {
         if (prevState.searchQuery !== this.state.searchQuery) {
             this.fetchMovies();
+            localStorage.setItem('searchQuery',JSON.stringify(this.state.searchQuery))
         }
     }
   
